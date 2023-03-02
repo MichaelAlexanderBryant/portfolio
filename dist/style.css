@@ -1,11 +1,24 @@
-header {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+body {
+    margin: 0;
+    padding: 0;
 }
 
+@media (max-width: 414px) {
+body {
+    margin: 10px;
+}
 .headshot-mobile {
-    width: 20em;
+    width: 80vw;
     height: auto;
+    object-fit: fill;
+}
+.social-media-icons {
+    display:flex;
+    justify-content: center;
+    gap: 1em;
+}
+.github-icon, .linkedin-icon, .kaggle-icon {
+    height: 2em;
+    width: auto;
+}
 }

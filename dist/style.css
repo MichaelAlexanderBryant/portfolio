@@ -1,5 +1,5 @@
 :root {
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif
+    font-family: 'Montserrat', 'Roboto', Arial, sans-serif;
 }
 
 body {
@@ -13,7 +13,6 @@ body {
 }
 
 header {
-    background: rgb(23,21,68);
     color: white;
 }
 
@@ -21,10 +20,25 @@ a {
     text-decoration: none;
 }
 
-@media (max-width: 414px) {
+.tablet-columns-top {
+    display:flex;
+
+}
+
+@media (max-width: 500px) {
+
+.tablet-columns-top {
+    flex-direction: column;
+}
+
 
 header {
+    background: rgb(23,21,68);
     padding: 1.5em;
+}
+
+.header-name {
+    display:inline-block;
 }
     
 .headshot-mobile {
@@ -36,6 +50,10 @@ header {
 
 .about-me {
     padding: 1.5em;
+}
+
+.about-me-name {
+    display: none;
 }
 
 .social-media-icons {
@@ -105,6 +123,237 @@ footer {
 }
 }
 
-@media (max-width: 1280px) {
+@media (min-width: 501px) and (max-width: 1280px) {
+
+    .tablet-columns-top {
+        flex-direction: column;
+        background-color: rgba(23,21,68,1);
 
     }
+    header {
+        flex: 1;
+        padding: 1.5em;
+    }
+        
+    .headshot-mobile {
+        width: 100%;
+        height: auto;
+        object-fit: fill;
+        box-shadow: rgba(255, 255, 255, 0.1) 0px 1px 1px 0px inset, rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+    }
+
+    
+    .about-me {
+        flex: 1;
+        padding: 1.5em;
+        background-color: white;
+    }
+    
+    .social-media-icons {
+        display:flex;
+        justify-content: center;
+        gap: 1em;
+    }
+    .github-icon, .linkedin-icon, .kaggle-icon {
+        height: 2em;
+        width: auto;
+    }
+    
+    .my-work {
+        padding: 0 1.5em 2em 1.5em;
+    }
+
+    .my-work-title {
+
+    }
+    
+    .projects {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        gap: 2em;
+        
+    }
+    
+    .project-card {
+        width: 20em;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+    }
+    
+    .project-image {
+        width: auto;
+    }
+    
+    .img-placeholder {
+        width: auto;
+        height: 200px;
+        background-color: #A3A5C3;
+        
+    }
+    
+    .header-icons {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 1em;
+    }
+    
+    .project-description {
+        padding: 0 0.5em 2em 0.5em;
+    }
+    
+    
+    .github-icon-project, .open-in-new-icon-project {
+        height: 1.25em;
+        width: auto;
+    }
+    
+    footer {
+        background-color: rgba(23,21,68,1);
+        color: white;
+        padding: 0.75em 1.5em 2em 1.5em;
+    }
+}
+
+
+@media (min-width: 1281px) {
+
+    html {
+        width: 100vw;
+    }
+
+    body {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color: rgba(23,21,68,1);
+    }
+
+    .container {
+        width: auto;
+        display: grid;
+        grid-template-rows: 2fr 5fr 1fr
+    }
+
+    .tablet-columns-top {
+        display: flex;
+        justify-content: center;
+        
+    }
+    header {
+        flex:1;
+        background-color: rgba(23,21,68,1);
+        position:relative;
+    }
+
+    .header-name {
+        color: white;
+        position: absolute;
+        top: 60%;
+        left: 5%;
+        font-size: 3em;
+
+    }
+        
+    .headshot-mobile {
+        width: 100%;
+        height: auto;
+        object-fit: fill;
+    }
+
+    
+    .about-me {
+        flex: 1;
+        padding: 1.5em;
+        background-color: rgba(23,21,68,1);
+        display:flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .about-me-container {
+        background-color: white;
+        padding: 2em;
+
+    }
+    
+    .social-media-icons {
+        display:flex;
+        justify-content: center;
+        gap: 1em;
+    }
+    .github-icon, .linkedin-icon, .kaggle-icon {
+        height: 2em;
+        width: auto;
+    }
+    
+    .my-work {
+        padding: 0 1.5em 2em 1.5em;
+        background-color: white;
+    }
+    
+    .projects {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        align-items: center;
+        justify-content: center;
+        justify-items: center;
+        gap: 2em;
+        
+    }
+    
+    .project-card {
+        width: 30em;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+    }
+    
+    .project-image {
+        width: auto;
+    }
+    
+    .img-placeholder {
+        width: auto;
+        height: 200px;
+        background-color: #A3A5C3;
+        
+    }
+    
+    .header-icons {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 1em;
+    }
+    
+    .project-description {
+        padding: 0 0.5em 2em 0.5em;
+    }
+    
+    
+    .github-icon-project, .open-in-new-icon-project {
+        height: 1.25em;
+        width: auto;
+    }
+    
+    footer {
+        background-color: white;
+        color: black;
+        padding: 0.75em 1.5em 2em 1.5em;
+    }
+
+    g {
+        fill: black;
+    }
+}
+

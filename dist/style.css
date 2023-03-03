@@ -48,6 +48,10 @@ header {
     box-shadow: rgba(255, 255, 255, 0.1) 0px 1px 1px 0px inset, rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
 }
 
+.header-name-about-me {
+    display: none;
+}
+
 .about-me {
     padding: 1.5em;
 }
@@ -142,6 +146,9 @@ footer {
         box-shadow: rgba(255, 255, 255, 0.1) 0px 1px 1px 0px inset, rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
     }
 
+    .header-name-about-me {
+        display: none;
+    }
     
     .about-me {
         flex: 1;
@@ -226,6 +233,7 @@ footer {
 
     html {
         width: 100vw;
+        overflow: scroll;
     }
 
     body {
@@ -233,7 +241,7 @@ footer {
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        background-color: rgba(23,21,68,1);
+        background-image: linear-gradient(rgba(23,21,68,1), white);
     }
 
     .container {
@@ -244,44 +252,55 @@ footer {
 
     .tablet-columns-top {
         display: flex;
+        flex-direction: row-reverse;
         justify-content: center;
+        align-items: center;
+        width: 100vw;
         
     }
     header {
+
         flex:1;
-        background-color: rgba(23,21,68,1);
-        position:relative;
+        display: flex;
+        justify-content: flex-start;
+        width: 100%;
+        
     }
 
     .header-name {
-        color: white;
-        position: absolute;
-        top: 60%;
-        left: 5%;
-        font-size: 3em;
+        display: none;
+    }
 
+    .header-name-about-me {
+        color: black;
+        font-size: 4em;
+        padding: 0;
+        margin: 0;
+        
     }
         
     .headshot-mobile {
-        width: 100%;
+        width: 40em;
         height: auto;
-        object-fit: fill;
+        box-shadow: rgba(0, 0, 0, 0.45) 0px 25px 20px -20px;
     }
 
     
     .about-me {
         flex: 1;
-        padding: 1.5em;
-        background-color: rgba(23,21,68,1);
-        display:flex;
+        display: flex;
+        flex-direction: column;
         justify-content: center;
-        align-items: center;
+        align-items: flex-end;
+
     }
 
     .about-me-container {
         background-color: white;
         padding: 2em;
-
+        width: 40em;
+        height: 50%;
+        box-shadow: rgba(0, 0, 0, 0.45) 0px 25px 20px -20px;
     }
     
     .social-media-icons {
@@ -297,6 +316,12 @@ footer {
     .my-work {
         padding: 0 1.5em 2em 1.5em;
         background-color: white;
+        /* width: 100vw; */
+    }
+
+    .my-work-title {
+        font-size: 2em;
+
     }
     
     .projects {

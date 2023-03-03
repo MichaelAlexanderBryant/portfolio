@@ -34,16 +34,17 @@ a {
     flex: 1;
     flex-direction: column;
     align-items: center;
+    border-bottom: 5px solid rgba(23,21,68,1);
 }
 
 
 header {
     background: rgb(23,21,68);
-    padding: 1.5em;
 }
 
 .header-name {
     display:block;
+    padding: 0 1em;
 }
     
 .headshot-mobile {
@@ -141,21 +142,24 @@ footer {
 }
 }
 
-@media (min-width: 701px) and (max-width: 1500px) {
+@media (min-width: 701px) and (max-width: 1000px) {
 
     .tablet-columns-top {
-        flex-direction: row;
+        flex-direction: column;
         justify-content: space-evenly;
         background-color: rgba(23,21,68,1);
-
+        border-bottom: 5px solid rgba(23,21,68,1);
     }
     header {
         flex: 1;
-        padding: 1.5em;
+    }
+
+    .header-name {
+        padding: 0 1em;
     }
         
     .headshot-mobile {
-        width: 30em;
+        width: 100%;
         height: auto;
         box-shadow: rgba(255, 255, 255, 0.1) 0px 1px 1px 0px inset, rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
     }
@@ -183,9 +187,120 @@ footer {
     .my-work {
         padding: 0 1.5em 2em 1.5em;
     }
+    
+    .projects {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        gap: 2em;
+        
+    }
+    
+    .project-card {
+        width: 20em;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+    }
+    
+    .project-image {
+        width: auto;
+    }
+    
+    .img-placeholder {
+        width: auto;
+        height: 200px;
+        background-color: #A3A5C3;
+        
+    }
+    
+    .header-icons {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 1em;
+    }
+    
+    .project-description {
+        padding: 0 0.5em 2em 0.5em;
+    }
+    
+    
+    .github-icon-project, .open-in-new-icon-project {
+        height: 1.25em;
+        width: auto;
+    }
+    
+    footer {
+        background-color: rgba(23,21,68,1);
+        color: white;
+        padding: 0.75em 1.5em 2em 1.5em;
+    }
+}
 
-    .my-work-title {
+@media (min-width: 1001px) and (max-width: 1500px) {
 
+    .tablet-columns-top {
+        flex-direction: row-reverse;
+        justify-content: space-evenly;
+        background-color: rgba(23,21,68,1);
+        border-bottom: 5px solid rgba(23,21,68,1);
+
+    }
+    header {
+        flex: 1;       
+    }
+        
+    .headshot-mobile {
+        width: 100%;
+        height: auto;
+        box-shadow: rgba(255, 255, 255, 0.1) 0px 1px 1px 0px inset, rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+    }
+
+    .header-name {
+        display: none;
+    }
+
+    .header-name-about-me {
+        color: black;
+        font-size: 4em;
+        padding: 0;
+        margin: 0;
+        
+    }
+    
+    .about-me {
+        flex: 1;
+        padding: 1.5em;
+        background-color: white;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        
+    }
+
+    .about-me-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    
+    .social-media-icons {
+        display:flex;
+        justify-content: center;
+        gap: 1em;
+    }
+    .github-icon, .linkedin-icon, .kaggle-icon {
+        height: 2em;
+        width: auto;
+    }
+    
+    .my-work {
+        padding: 0 1.5em 2em 1.5em;
     }
     
     .projects {
@@ -260,10 +375,11 @@ footer {
     .container {
         width: auto;
         display: grid;
-        grid-template-rows: 2fr 5fr 1fr
+        grid-template-rows: 6fr 19fr 1fr
     }
 
     .tablet-columns-top {
+        grid-row: 1 / 2;
         display: flex;
         flex-direction: row-reverse;
         justify-content: center;
@@ -327,9 +443,9 @@ footer {
     }
     
     .my-work {
-        padding: 0 1.5em 2em 1.5em;
+        grid-row: 2 / 3;
+        padding: 0 1.5em;
         background-color: white;
-        /* width: 100vw; */
     }
 
     .my-work-title {
@@ -359,13 +475,7 @@ footer {
     .project-image {
         width: auto;
     }
-    
-    .img-placeholder {
-        width: auto;
-        height: 200px;
-        background-color: #A3A5C3;
-        
-    }
+
     
     .header-icons {
         display: flex;
@@ -385,13 +495,21 @@ footer {
     }
     
     footer {
-        background-color: white;
-        color: black;
+        grid-row: 3 / 4;
+        flex:1;
+        background-color: rgba(23,21,68,1);
+        color: white;
         padding: 0.75em 1.5em 2em 1.5em;
+
     }
 
-    g {
-        fill: black;
+    .footer-container {
+        display:flex;
+        justify-content: center;
+        align-items: center;
+
     }
-}
+
+   }
+
 

@@ -3,12 +3,21 @@ body {
     padding: 0;
 }
 
+.contact-info {
+    list-style: none;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
 @media (max-width: 414px) {
 body {
     margin: 10px;
 }
 .headshot-mobile {
-    width: 80vw;
+    width: 100%;
     height: auto;
     object-fit: fill;
 }
@@ -31,7 +40,30 @@ body {
 
 .project-card {
     border: 1px solid black;
-    width: 23em;
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.img-placeholder {
+    width: auto;
     height: 200px;
+    border: 1px solid black;
+    
+}
+
+.header-icons {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 1em;
+}
+
+
+.github-icon-project, .open-in-new-icon-project {
+    height: 1.25em;
+    width: auto;
 }
 }

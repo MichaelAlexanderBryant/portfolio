@@ -1,12 +1,17 @@
 {
   "name": "portfolio",
   "version": "1.0.0",
+  "repository": {
+    "url": "git+https://github.com/michaelalexanderbryant/portfolio.git"
+  },
   "description": "",
   "main": "index.js",
   "scripts": {
     "test": "jest",
-    "watch": "jest --watch *.js", 
-    "build": "webpack"
+    "watch": "jest --watch *.js",
+    "build": "webpack",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist"
   },
   "author": "",
   "license": "ISC",
@@ -16,6 +21,7 @@
     "eslint-config-airbnb-base": "^15.0.0",
     "eslint-config-prettier": "^8.6.0",
     "eslint-plugin-import": "^2.27.5",
+    "gh-pages": "^5.0.0",
     "jest": "^29.4.3",
     "prettier": "2.8.4",
     "webpack": "^5.75.0",

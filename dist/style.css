@@ -244,7 +244,7 @@ footer {
     }
 }
 
-@media (min-width: 1001px) and (max-width: 1500px) {
+@media (min-width: 1001px) and (max-width: 1300px) {
 
     .tablet-columns-top {
         flex-direction: row-reverse;
@@ -360,7 +360,7 @@ footer {
 }
 
 
-@media (min-width: 1501px) {
+@media (min-width: 1301px) {
 
     html {
         width: 100vw;
@@ -376,26 +376,22 @@ footer {
 
     .container {
         width: auto;
-        display: grid;
-        grid-template-rows: 6fr 19fr 1fr
     }
 
     .tablet-columns-top {
-        grid-row: 1 / 2;
         display: flex;
         flex-direction: row-reverse;
         justify-content: center;
         align-items: center;
-        width: 100vw;
-        
+        width: 100vw;  
+        padding: 2em 0;      
     }
     header {
 
         flex:1;
         display: flex;
         justify-content: flex-start;
-        width: 100%;
-        
+        width: 100%;        
     }
 
     .header-name {
@@ -429,7 +425,7 @@ footer {
     .about-me-container {
         background-color: white;
         padding: 2em;
-        width: 40em;
+        width: 30em;
         height: 50%;
         box-shadow: rgba(0, 0, 0, 0.45) 0px 25px 20px -20px;
     }
@@ -445,8 +441,7 @@ footer {
     }
     
     .my-work {
-        grid-row: 2 / 3;
-        padding: 0 1.5em;
+        padding: 0.5em 1.5em 2em 1.5em;
         background-color: white;
     }
 
@@ -456,8 +451,9 @@ footer {
     }
     
     .projects {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
+        display: flex;
+        flex-wrap: wrap;
+        /* grid-template-columns: repeat(3, 1fr); */
         align-items: center;
         justify-content: center;
         justify-items: center;
@@ -497,7 +493,6 @@ footer {
     }
     
     footer {
-        grid-row: 3 / 4;
         flex:1;
         background-color: rgba(23,21,68,1);
         color: white;

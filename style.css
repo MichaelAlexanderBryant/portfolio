@@ -195,7 +195,7 @@ footer {
         flex-direction: row;
         flex-wrap: wrap;
         align-items: center;
-        justify-content: center;
+        justify-content: space-between;
         gap: 2em;
         
     }
@@ -310,7 +310,7 @@ footer {
         flex-direction: row;
         flex-wrap: wrap;
         align-items: center;
-        justify-content: center;
+        justify-content: space-between;
         gap: 2em;
         
     }
@@ -387,7 +387,6 @@ footer {
         padding: 2em 0;      
     }
     header {
-
         flex:1;
         display: flex;
         justify-content: flex-start;
@@ -441,21 +440,28 @@ footer {
     }
     
     .my-work {
-        padding: 0.5em 1.5em 2em 1.5em;
+        padding: 0.5em 5em 2em 5em;
         background-color: white;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .work-container {
+        display: inline;
     }
 
     .my-work-title {
         font-size: 2em;
-
     }
     
     .projects {
         display: flex;
         flex-wrap: wrap;
-        /* grid-template-columns: repeat(3, 1fr); */
+
         align-items: center;
-        justify-content: center;
+        justify-content: space-between;
         justify-items: center;
         gap: 2em;
         

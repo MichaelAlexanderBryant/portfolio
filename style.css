@@ -201,7 +201,7 @@ footer {
     }
     
     .project-card {
-        width: 20em;
+        width: 15em;
         height: auto;
         display: flex;
         flex-direction: column;
@@ -316,7 +316,7 @@ footer {
     }
     
     .project-card {
-        width: 20em;
+        width: 18em;
         height: auto;
         display: flex;
         flex-direction: column;
